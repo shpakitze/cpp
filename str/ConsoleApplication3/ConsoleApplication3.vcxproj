@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2796AA28-2BA9-40CC-96B9-B6AAD4B56212}</ProjectGuid>
+    <ProjectGuid>{3982F113-E306-4C17-8363-BE7AC09CAF42}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>homework24</RootNamespace>
+    <RootNamespace>ConsoleApplication3</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -76,7 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="source.cpp" />
+    <ClCompile Include="str.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
