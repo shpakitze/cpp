@@ -7,28 +7,28 @@
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 ///////////////////////////////////////////////////////////////////////////////////////////////
 void game(HWND hWnd){
-	int try_count=0;
-	int player_ch;
-std::vector <int> num;
+	INT try_count=0;
+	INT player_ch;
+std::vector <INT> num;
 num.resize(101);
-for (int i=0;i<=100;++i){
+for (INT i=0;i<=100;++i){
 	num[i]=i;
 }
 std::random_shuffle (num.begin(), num.end());
 
-	wchar_t r[3];
-	wchar_t message_user[32]=L"Ваше число равно ";
-	wchar_t win_mess[32]=L"win. Попыток ";
-	bool win=false;
+	TCHAR r[3];
+	TCHAR message_user[32]=L"Ваше число равно ";
+	TCHAR win_mess[32]=L"win. Попыток ";
+	BOOL win=false;
 	do{
 		_itow_s(num[try_count],r,3,10);
-		wchar_t all_mes[32]=L"";
-		wcscat(all_mes,message_user);
-		wcscat(all_mes,r);
+		TCHAR all_mes[32]=L"";
+		lstrcat(all_mes,message_user);
+		lstrcat(all_mes,r);
 		player_ch=MessageBox(hWnd, all_mes, TEXT("Играем"), MB_YESNOCANCEL|MB_ICONQUESTION);
 		if (player_ch==IDYES) {
 			_itow_s(try_count+1,r,3,10);
-			wcscat(win_mess,r);
+			lstrcat(win_mess,r);
 			MessageBox(hWnd, win_mess, TEXT("Играем"), MB_OK|MB_ICONEXCLAMATION);
 			return;
 		}
